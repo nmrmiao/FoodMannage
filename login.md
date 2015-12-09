@@ -40,7 +40,8 @@ void CLogindlg::OnOK()
 		try
 		{			
 			m_pRs.CreateInstance("ADODB.Recordset");
-			m_pRs->Open((_variant_t)sql,theApp->m_pCon.GetInterfacePtr(),adOpenDynamic,adLockOptimistic,adCmdText);//打开数据库
+			//打开数据库
+			m_pRs->Open((_variant_t)sql,theApp->m_pCon.GetInterfacePtr(),adOpenDynamic,adLockOptimistic,adCmdText);
 			if(m_pRs->adoEOF)//记录集为空
 			{
 				AfxMessageBox("用户名或密码错误!");	
