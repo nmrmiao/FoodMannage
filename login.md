@@ -5,14 +5,11 @@
 #include "FoodBevManage.h"
 #include "Logindlg.h"
 #include "FoodBevManageDlg.h"
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 #endif
-
-
 CLogindlg::CLogindlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CLogindlg::IDD, pParent)
 {
@@ -22,8 +19,6 @@ CLogindlg::CLogindlg(CWnd* pParent /*=NULL*/)
 	//}}AFX_DATA_INIT
 	i = 0;
 }
-
-
 void CLogindlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
@@ -32,13 +27,8 @@ void CLogindlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT2, m_Userpasswd);
 	//}}AFX_DATA_MAP
 }
-
-
 BEGIN_MESSAGE_MAP(CLogindlg, CDialog)
 END_MESSAGE_MAP()
-
-/////////////////////////////////////////////////////////////////////////////
-// CLogindlg message handlers
 
 void CLogindlg::OnOK() 
 {
